@@ -3,6 +3,8 @@ from __future__ import print_function
 import numpy as np
 from cs231n.classifiers.linear_svm import *
 from cs231n.classifiers.softmax import *
+from past.builtins import xrange
+
 
 class LinearClassifier(object):
 
@@ -36,12 +38,12 @@ class LinearClassifier(object):
 
     # Run stochastic gradient descent to optimize W
     loss_history = []
-    for it in range(num_iters):
+    for it in xrange(num_iters):
       X_batch = None
       y_batch = None
 
       #########################################################################
-      # DONE:                                                                 #
+      # TODO:                                                                 #
       # Sample batch_size elements from the training data and their           #
       # corresponding labels to use in this round of gradient descent.        #
       # Store the data in X_batch and their corresponding labels in           #
@@ -51,9 +53,7 @@ class LinearClassifier(object):
       # Hint: Use np.random.choice to generate indices. Sampling with         #
       # replacement is faster than sampling without replacement.              #
       #########################################################################
-      rand_indices = np.random.choice(num_train, batch_size, replace=True)
-      X_batch = X[rand_indices]
-      y_batch = y[rand_indices]
+      pass
       #########################################################################
       #                       END OF YOUR CODE                                #
       #########################################################################
@@ -64,13 +64,10 @@ class LinearClassifier(object):
 
       # perform parameter update
       #########################################################################
-      # DONE:                                                                 #
+      # TODO:                                                                 #
       # Update the weights using the gradient and the learning rate.          #
       #########################################################################
-        
-      # Subtract from previous place because we want to go steepest descent
-      self.W -= learning_rate * grad
-
+      pass
       #########################################################################
       #                       END OF YOUR CODE                                #
       #########################################################################
@@ -99,9 +96,7 @@ class LinearClassifier(object):
     # TODO:                                                                   #
     # Implement this method. Store the predicted labels in y_pred.            #
     ###########################################################################
-    # X (N, 3k), W (3k, 10)
-    scores = np.matmul(X,self.W)
-    y_pred = np.argmax(scores, axis=1)
+    pass
     ###########################################################################
     #                           END OF YOUR CODE                              #
     ###########################################################################
