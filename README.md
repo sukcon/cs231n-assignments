@@ -1,4 +1,4 @@
-# Compeleted assignments for Stanford's cs231n by Fei-Fei Lee.
+# Compeleted assignments for Stanford's cs231n.
 [Link to course](http://cs231n.github.io/)
 
 ## Course Summary
